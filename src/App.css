@@ -1,0 +1,269 @@
+#root {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px 0;
+}
+
+/* loading */
+.loading-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid var(--primary-color);
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+/* header-sec */
+.header-sec {
+  position: relative;
+  padding: 20px 20px 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0px 1px 18px -2px #f2f2f2;
+}
+
+.header-sec .links-wrapper ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.header-sec .links-wrapper li {
+  display: inline-block;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.header-sec .links-wrapper li a {
+  color: #000000;
+  font-weight: 600;
+}
+
+.header-sec .links-wrapper li a:hover {
+  color: #888;
+}
+
+.header-sec .links-wrapper .user-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #44464b;
+}
+
+/* page-title */
+.page-title {
+  margin: auto;
+  margin-bottom: 50px;
+  background-color: #f7f8fa;
+  padding: 30px 0;
+  text-transform: capitalize;
+}
+
+.page-title .container {
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* footer-sec */
+.footer-sec {
+  background-color: #f7f8fa;
+  color: #000000;
+  text-align: center;
+  padding: 30px 0;
+}
+
+/* add-post-wrapper */
+.add-post-wrapper {
+  padding: 50px 0;
+}
+.add-post-wrapper form {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  /* border: 1px solid #888; */
+  box-shadow: 0 5px 35px -5px #ddd;
+  padding: 50px;
+}
+
+.add-post-wrapper form .input-wrapper {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+.add-post-wrapper form .input-wrapper textarea {
+  height: 150px;
+}
+
+.add-post-wrapper form .upload-input-wrapper .img-wrapper {
+  width: 100%;
+  border: 1px dashed #888;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 30px;
+}
+
+.add-post-wrapper form .upload-input-wrapper .img-wrapper:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.add-post-wrapper form .upload-input-wrapper .upload-input {
+  display: none;
+}
+
+.progress {
+  background-color: #aaa;
+  border-radius: 50px;
+}
+
+.progress-bar {
+  background-color: var(--primary-color);
+  border-radius: 50px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.25rem 1rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* posts */
+.posts-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+
+.post-container {
+  flex-basis: 33.33333%;
+  padding: 0 15px;
+  flex-grow: 1;
+}
+
+.post-container .category {
+  font-weight: 400;
+  color: var(--primary-color);
+}
+
+.post-container .category span {
+  color: #94979e;
+}
+
+.post-container .post-img {
+  height: 260px;
+  width: 100%;
+  object-fit: cover !important;
+  margin-bottom: 10px;
+}
+
+.post-container.single-post .post-img {
+  height: auto;
+  max-height: 700px;
+  width: 100%;
+  object-fit: contain !important;
+}
+
+.post-container .title {
+  font-size: 1.7rem;
+  line-height: 1.15;
+  font-weight: 700;
+  margin-bottom: 25px;
+  margin-top: 15px;
+}
+
+.post-container .author span {
+  color: #94979e;
+  font-weight: 300;
+}
+
+.post-container .date {
+  color: #94979e;
+  font-weight: 300;
+  font-size: 15px;
+  font-family: var(--body-font);
+}
+
+.filters-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 15px;
+}
+
+.filters-wrapper .filter {
+  flex-grow: 1;
+}
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
