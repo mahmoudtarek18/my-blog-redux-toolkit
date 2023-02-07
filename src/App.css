@@ -203,7 +203,7 @@ img {
 .post-container {
   flex-basis: 33.33333%;
   padding: 0 15px;
-  flex-grow: 1;
+  /* flex-grow: 1; */
 }
 
 .post-container .category {
